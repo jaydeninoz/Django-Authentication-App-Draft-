@@ -1,0 +1,15 @@
+{% extends 'authenticate/base.html' %}
+
+{% block content %}
+<h1>This is the homepage ahhh</h1>
+<button type="button" class="btn btn-primary">Primary</button>
+{% if user.is_authenticated  %}
+    <br>
+    <br>
+    <p>Name: {{ user.first_name }} {{ user.last_name}}  </p>
+    <p>Username: {{ user.username }} </p>
+    <p>Email: {{ user.email}} </p>
+    
+{% endif %}
+
+{% endblock %}
